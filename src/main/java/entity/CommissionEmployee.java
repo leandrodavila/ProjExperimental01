@@ -59,11 +59,7 @@ public class CommissionEmployee extends Employee {
          "commission rate", getCommissionRate() );
    } // end method toString
 
-@Override
-public double getPaymentAmount() {
-	// TODO Auto-generated method stub
-	return 0;
-}
+
 } // end class CommissionEmployee
 
 

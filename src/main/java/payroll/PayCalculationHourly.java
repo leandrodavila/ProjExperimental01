@@ -7,13 +7,12 @@ public class PayCalculationHourly extends PayrollCalculation {
 
 	public PayCalculationHourly(Employee employee) {
 		super(employee);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public double getEarnings(Employee employee) {
+	public double getGrossPayment() {
 		
-		HourlyEmployee hourlyEmployee = ( HourlyEmployee) employee;
+		HourlyEmployee hourlyEmployee = ( HourlyEmployee) this.employee;
 		
 	    if ( hourlyEmployee.getHours() <= 40 ) // no overtime
 	        return hourlyEmployee.getWage() * hourlyEmployee.getHours();

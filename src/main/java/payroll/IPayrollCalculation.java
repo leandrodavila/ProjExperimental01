@@ -5,6 +5,6 @@ import entity.Employee;
  
 public interface IPayrollCalculation {
 	
-	public double getEarnings(Employee employee);
+	public double getGrossPayment();
 
 }

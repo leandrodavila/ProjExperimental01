@@ -11,9 +11,9 @@ public class PayCalculationCommission extends PayrollCalculation  {
 	}
 
 	@Override
-	public double getEarnings(Employee employee) {
+	public double getGrossPayment() {
 		
-		CommissionEmployee commissionEmployee = ( CommissionEmployee ) employee;
+		CommissionEmployee commissionEmployee = ( CommissionEmployee ) this.employee;
 		
 		return commissionEmployee.getCommissionRate() * commissionEmployee.getGrossSales();
 	}

@@ -43,15 +43,6 @@ public class HourlyEmployee extends Employee
       return hours;
    } // end method getHours
 
-   // calculate earnings; override abstract method earnings in Employee
-   public double earnings()
-   {
-      if ( getHours() <= 40 ) // no overtime
-         return getWage() * getHours();
-      else
-         return 40 * getWage() + ( getHours() - 40 ) * getWage() * 1.5;
-   } // end method earnings
-
    // return String representation of HourlyEmployee object
    public String toString()
    {
@@ -60,11 +51,7 @@ public class HourlyEmployee extends Employee
          "hours worked", getHours() );
    } // end method toString
 
-@Override
-public double getPaymentAmount() {
-	// TODO Auto-generated method stub
-	return 0;
-}
+
 } // end class HourlyEmployee
 
 

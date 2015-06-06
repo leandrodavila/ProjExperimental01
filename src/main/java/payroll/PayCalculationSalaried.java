@@ -11,9 +11,9 @@ public class PayCalculationSalaried extends PayrollCalculation {
 	}
 
 	@Override
-	public double getEarnings(Employee employee) {
+	public double getGrossPayment() {
 		
-		SalariedEmployee salariedEmployee = (SalariedEmployee) employee;
+		SalariedEmployee salariedEmployee = (SalariedEmployee) this.employee;
 		
 		return salariedEmployee.getWeeklySalary() * 4;
 	}

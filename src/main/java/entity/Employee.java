@@ -2,16 +2,16 @@ package entity;
 // Fig. 10.13: Employee.java
 // Employee abstract superclass implements Payable.
 
-public abstract class Employee implements Payable {
+public abstract class Employee  {
 	
-	public static int SALARIED_EMPLOYEE            = 1;
-	public static int HOURLY_EMPLOYEE              = 2;
-    public static int COMMISSION_EMPLOYEE          = 3;
-    public static int BASEPLUS_COMMISSION_EMPLOYEE = 4;	
+	public final static int SALARIED_EMPLOYEE            = 1;
+	public final static int HOURLY_EMPLOYEE              = 2;
+    public final static int COMMISSION_EMPLOYEE          = 3;
+    public final static int BASEPLUS_COMMISSION_EMPLOYEE = 4;	
 	
-    private String firstName;
-    private String lastName;
-    private String socialSecurityNumber;
+    private   String firstName;
+    private   String lastName;
+    private   String socialSecurityNumber;
     protected int    typeContract;
 
    // three-argument constructor
@@ -63,6 +63,39 @@ public abstract class Employee implements Payable {
 	   return this.typeContract;
 	   
    }
+   
+   public String getTypeContractText() {
+	   
+	   String typeContractText = "";
+	   
+	   
+	    switch ( this.typeContract ) {
+	    
+	       case SALARIED_EMPLOYEE: 
+	    	   typeContractText = "Salaried";
+		       break;
+		       					   
+	       case HOURLY_EMPLOYEE: 
+	    	   typeContractText = "Hourly";
+		       break;
+		       
+	       case COMMISSION_EMPLOYEE: 
+	    	   typeContractText = "Commission";
+		       break;
+		       
+	       case BASEPLUS_COMMISSION_EMPLOYEE: 
+	    	   typeContractText = "Base Plus Commission";
+		       break;
+
+	       default: 
+	    	   typeContractText = "Invalid Contract";
+	    	   break;
+	    }
+	    
+	    return typeContractText;
+	   
+   }
+
 
    // return String representation of Employee object
    public String toString()
