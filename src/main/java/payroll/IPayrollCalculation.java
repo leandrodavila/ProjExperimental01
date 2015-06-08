@@ -1,7 +1,4 @@
 package payroll;
-
-import entity.Employee;
-
  
 public interface IPayrollCalculation {
 	
